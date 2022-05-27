@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="30dp"
+        android:text="@string/length"
+        android:textColor="?attr/colorOnSecondary"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/name"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:weightSum="3">
+
+            <EditText
+                android:id="@+id/field_a"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2"
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="?attr/colorOnPrimary"
+                android:textColorHint="?attr/colorOnPrimary"
+                android:textSize="25sp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_rounded"
+                        android:backgroundTint="?attr/colorOnSecondary" />
+
+                </LinearLayout>
+
+                <NumberPicker
+                    android:id="@+id/metrics_picker_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:theme="@style/Theme.Calculator.NumberPickerStyle" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="3">
+
+            <EditText
+                android:id="@+id/field_b"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2"
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="?attr/colorOnPrimary"
+                android:textColorHint="?attr/colorOnPrimary"
+                android:textSize="25sp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_rounded"
+                        android:backgroundTint="?attr/colorOnSecondary" />
+
+                </LinearLayout>
+
+                <NumberPicker
+                    android:id="@+id/metrics_picker_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:theme="@style/Theme.Calculator.NumberPickerStyle" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
